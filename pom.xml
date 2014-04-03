@@ -48,13 +48,18 @@
 			<version>${sos.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>odmg</groupId>
-			<artifactId>odmg</artifactId>
-			<version>3.0</version>
-		</dependency>
+           <groupId>org.rasdaman</groupId>
+           <artifactId>rasj</artifactId>
+           <version>1.0</version>
+        </dependency>
 	</dependencies>
 
 	<repositories>
+		<repository>
+			<id>lib-repository</id>
+			<name>Local Repository</name>
+			<url>file:///${project.basedir}/lib-repository/</url>
+		</repository>
 		<repository>
 			<id>n52-releases</id>
 			<name>52n Releases</name>
