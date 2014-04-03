@@ -24,6 +24,7 @@
 	<properties>
 		<sos.groupId>org.n52.sensorweb.sos</sos.groupId>
 		<sos.version>4.1.0-SNAPSHOT</sos.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<build>
