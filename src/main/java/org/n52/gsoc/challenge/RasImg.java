@@ -1,7 +1,7 @@
 package org.n52.gsoc.challenge;
 
 public class RasImg {
-	byte[] values = null;
+	public byte[] values = null;
 	
 	public RasImg() {
 		
@@ -17,6 +17,7 @@ public class RasImg {
 	}
 	
 	public byte[] getValues() {
+		
 		return values;
 	}
 
@@ -26,7 +27,7 @@ public class RasImg {
 	
 	@Override
 	public String toString() {
-		String returnVal = new String("[");
+		String returnVal = new String();
 		if (values == null)
 			return null;
 		
@@ -35,6 +36,6 @@ public class RasImg {
 			returnVal += ", " + values[i];
 		}
 		
-		return returnVal + "]";
+		return returnVal;
 	}
 }
