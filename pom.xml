@@ -48,10 +48,22 @@
 			<version>${sos.version}</version>
 		</dependency>
 		<dependency>
-           <groupId>org.rasdaman</groupId>
-           <artifactId>rasj</artifactId>
-           <version>1.0</version>
-        </dependency>
+			<groupId>org.rasdaman</groupId>
+			<artifactId>rasj</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.8.8</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>xstream</groupId>
+			<artifactId>xstream</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+
 	</dependencies>
 
 	<repositories>

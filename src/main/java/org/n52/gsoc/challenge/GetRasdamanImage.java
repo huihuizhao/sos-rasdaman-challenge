@@ -67,27 +67,25 @@ public class GetRasdamanImage extends AbstractGetObservationDAO {
 			((RasImplementation)myApp).setUserIdentification(user, passwd);
 			myDb = myApp.newDatabase();
 
-			System.out.println("Opening database ...");
+//			System.out.println("Opening database ...");
 			myDb.open(base, Database.OPEN_READ_ONLY);
 
-			System.out.println("Starting transaction ...");
+//			System.out.println("Starting transaction ...");
 			myTa = myApp.newTransaction();
 			myTa.begin();
 
-			System.out.println("Retrieving MDDs ...");
+//			System.out.println("Retrieving MDDs ...");
 			myQu = myApp.newOQLQuery();
 			myQu.create("select img from "+ coll+" as img");
 			resultBag = (DBag)myQu.execute();
 
-
-			//System.out.println(resultBag);
 			if (resultBag != null)
 			{
 				Iterator iter = resultBag.iterator();
 				while (iter.hasNext())
 				{
 					result = (RasGMArray)iter.next();
-					System.out.println(result);
+//					System.out.println(result);
 					if(result.getTypeLength() != 3)
 						System.out.println("skipping image because of non-RGB cell type");
 					else
@@ -123,18 +121,18 @@ public class GetRasdamanImage extends AbstractGetObservationDAO {
 								result.spatialDomain().item(0).low() + 1) *
 								(result.spatialDomain().item(1).high() -
 										result.spatialDomain().item(1).low() + 1);
-						System.out.println("Average over "+pixelcount+" red pixels is "+
-								(sum/pixelcount));
+						/*System.out.println("Average over "+pixelcount+" red pixels is "+
+								(sum/pixelcount));*/
 						
 					}
 				}
-				System.out.println("All results");
+//				System.out.println("All results");
 			}
 
-			System.out.println( "Committing transaction ..." );
+//			System.out.println( "Committing transaction ..." );
 			myTa.commit();
 
-			System.out.println( "Closing database ..." );
+//			System.out.println( "Closing database ..." );
 			myDb.close();
 		}
 		catch (RasException rase)
@@ -158,7 +156,6 @@ public class GetRasdamanImage extends AbstractGetObservationDAO {
 			}
 		}
 		System.out.println( "Done." );
-		System.out.println(observationCollection.size() == pixelcount);
 		return observationCollection;
 	}
 
