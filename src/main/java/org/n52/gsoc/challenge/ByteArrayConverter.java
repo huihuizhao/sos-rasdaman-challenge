@@ -10,7 +10,6 @@ public class ByteArrayConverter implements Converter {
 
 	@Override
 	public boolean canConvert(Class c) {
-		// TODO Auto-generated method stub
 		return c.equals(RasImg.class);
 	}
 
