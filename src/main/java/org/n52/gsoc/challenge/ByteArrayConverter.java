@@ -10,13 +10,13 @@ public class ByteArrayConverter implements Converter {
 
 	@Override
 	public boolean canConvert(Class c) {
-		return c.equals(RasImg.class);
+		return c.equals(RasdamanData.class);
 	}
 
 	@Override
 	public void marshal(Object value, HierarchicalStreamWriter writer,
 			MarshallingContext arg2) {
-		RasImg rasImg = (RasImg) value;
+		RasdamanData rasImg = (RasdamanData) value;
 		writer.startNode("rasimg");
 		writer.setValue(rasImg.toString());
 		writer.endNode();
@@ -25,7 +25,7 @@ public class ByteArrayConverter implements Converter {
 	@Override
 	public Object unmarshal(HierarchicalStreamReader reader,
 			UnmarshallingContext arg1) {
-		RasImg rasImg = new RasImg();
+		RasdamanData rasImg = new RasdamanData();
 		reader.moveDown();
 		String[] values = reader.getValue().split(", ");
 		byte[] vals = new byte[values.length];

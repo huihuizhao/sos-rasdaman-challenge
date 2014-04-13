@@ -4,15 +4,13 @@ import org.n52.sos.ogc.gml.time.Time;
 import org.n52.sos.ogc.om.ObservationValue;
 import org.n52.sos.ogc.om.values.Value;
 
-import rasj.RasPoint;
-
-public class RasImgObservationValue implements ObservationValue<Value<RasImg>> {
+public class RasdamanObservationValue implements ObservationValue<Value<RasdamanData>> {
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	Value<RasImg> value = null;
+	Value<RasdamanData> value = null;
 	
 	@Override
 	public Time getPhenomenonTime() {
@@ -21,7 +19,7 @@ public class RasImgObservationValue implements ObservationValue<Value<RasImg>> {
 	}
 
 	@Override
-	public Value<RasImg> getValue() {
+	public Value<RasdamanData> getValue() {
 		return this.value;
 	}
 
@@ -32,7 +30,7 @@ public class RasImgObservationValue implements ObservationValue<Value<RasImg>> {
 	}
 
 	@Override
-	public void setValue(Value<RasImg> rasImgValue) {
+	public void setValue(Value<RasdamanData> rasImgValue) {
 		this.value = rasImgValue;
 	}
 

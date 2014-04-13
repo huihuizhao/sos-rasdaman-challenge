@@ -1,13 +1,14 @@
 package org.n52.gsoc.challenge;
 
-public class RasImg {
+public class RasdamanData {
+    
 	public byte[] values = null;
 	
-	public RasImg() {
+	public RasdamanData() {
 		
 	}
 	
-	public RasImg(byte[] values) {
+	public RasdamanData(byte[] values) {
 		if (values == null)
 			this.values = values;
 		this.values = new byte[values.length];

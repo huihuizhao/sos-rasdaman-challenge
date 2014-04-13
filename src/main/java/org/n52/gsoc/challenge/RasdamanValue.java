@@ -4,12 +4,12 @@ import org.n52.sos.ogc.om.values.Value;
 
 import rasj.RasPoint;
 
-public class RasImgValue implements Value<RasImg> {
+public class RasdamanValue implements Value<RasdamanData> {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	RasImg rasImg = null;
+	RasdamanData rasImg = null;
 	
 	@Override
 	public String getUnit() {
@@ -18,7 +18,7 @@ public class RasImgValue implements Value<RasImg> {
 	}
 
 	@Override
-	public RasImg getValue() {
+	public RasdamanData getValue() {
 		// TODO Auto-generated method stub
 		return this.rasImg;
 	}
@@ -42,7 +42,7 @@ public class RasImgValue implements Value<RasImg> {
 	}
 
 	@Override
-	public void setValue(RasImg rasImg) {
+	public void setValue(RasdamanData rasImg) {
 		// TODO Auto-generated method stub
 		this.rasImg = rasImg;
 	}

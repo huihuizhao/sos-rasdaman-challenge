@@ -55,8 +55,21 @@ public class RasdamanDAO extends AbstractGetObservationDAO {
 
     @Override
     public String toString() {
-        return "RasdamanDAO [server=" + server + ", base=" + base + ", coll=" + coll + ", port=" + port + ", user="
-                + user + ", passwd=" + passwd + "]";
+        StringBuilder builder = new StringBuilder();
+        builder.append("RasdamanDAO [server=");
+        builder.append(server);
+        builder.append(", base=");
+        builder.append(base);
+        builder.append(", coll=");
+        builder.append(coll);
+        builder.append(", port=");
+        builder.append(port);
+        builder.append(", user=");
+        builder.append(user);
+        builder.append(", passwd=");
+        builder.append(passwd);
+        builder.append("]");
+        return builder.toString();
     }
 
     @Override
@@ -117,9 +130,9 @@ public class RasdamanDAO extends AbstractGetObservationDAO {
 
                                 // Add observation to observationCollection
                                 OmObservation observation = new OmObservation();
-                                RasImgObservationValue myObs = new RasImgObservationValue();
-                                RasImgValue myValue = new RasImgValue();
-                                RasImg rasImg = new RasImg(result.getCell(p));
+                                RasdamanObservationValue myObs = new RasdamanObservationValue();
+                                RasdamanValue myValue = new RasdamanValue();
+                                RasdamanData rasImg = new RasdamanData(result.getCell(p));
                                 myValue.setValue(rasImg);
                                 myObs.setValue(myValue);
                                 observation.setValue(myObs);
