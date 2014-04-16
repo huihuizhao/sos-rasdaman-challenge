@@ -169,7 +169,7 @@ public class RasdamanDAO extends AbstractGetObservationDAO {
             }
         }
         
-        log.debug("Done, resulting collection: {}, size: {}", observationCollection, observationCollection.size());
+//        log.debug("Done, resulting collection: {}, size: {}", observationCollection, observationCollection.size());
         
         return observationCollection;
     }
